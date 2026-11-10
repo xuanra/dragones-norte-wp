@@ -1,0 +1,64 @@
+/*
+Theme Name: Dragones del Norte
+Description: Tema del club de wargames Dragones del Norte.
+Version: 1.0
+Text Domain: dragones
+*/
+
+:root{--bg:#eef2f2;--surface:#fff;--ink:#13252a;--muted:#4f6468;--mat:#1d3b3f;--mat-line:#2b5256;--ice:#a9cfcb;--ember:#b3392a;--ember-ink:#fff;--line:#c9d6d6;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1b1e;--surface:#152a2e;--ink:#e8f0ef;--muted:#9db5b4;--mat:#0a1517;--mat-line:#1a3236;--line:#26434a;--ember:#e0604c}}
+:root[data-theme="dark"]{--bg:#0e1b1e;--surface:#152a2e;--ink:#e8f0ef;--muted:#9db5b4;--mat:#0a1517;--mat-line:#1a3236;--line:#26434a;--ember:#e0604c}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 "Source Sans 3",system-ui,sans-serif}
+h1,h2,h3{font-family:"Pirata One",Georgia,serif;font-weight:400;line-height:1.1;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ember);outline-offset:3px}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.25rem}
+header.top{background:var(--mat);color:#eef2f2}
+header.top .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem 1.5rem;padding-top:.9rem;padding-bottom:.9rem}
+.brand{font-family:"Pirata One",serif;font-size:1.6rem;text-decoration:none}
+nav{display:flex;gap:.25rem;flex-wrap:wrap}
+nav a{padding:.45rem .9rem;text-decoration:none;font-weight:600;border-bottom:3px solid transparent}
+nav a[aria-current="page"]{border-color:var(--ember)}
+nav a:hover{border-color:var(--ice)}
+.hero{background:var(--mat);color:#eef2f2;background-image:linear-gradient(var(--mat-line) 1px,transparent 1px),linear-gradient(90deg,var(--mat-line) 1px,transparent 1px);background-size:48px 48px}
+.hero .wrap{padding-top:4.5rem;padding-bottom:4.5rem}
+.hero h1{font-size:clamp(3rem,10vw,6.5rem);max-width:12ch}
+.hero p{max-width:34rem;color:var(--ice);font-size:1.2rem;margin:1.25rem 0 1.75rem}
+.btn{display:inline-block;padding:.7rem 1.3rem;font:600 1rem "Source Sans 3",sans-serif;background:var(--ember);color:var(--ember-ink);border:2px solid var(--ember);border-radius:3px;text-decoration:none;cursor:pointer}
+.btn.ghost{background:transparent;color:inherit;border-color:currentColor}
+.btn:hover{filter:brightness(1.1)}
+.row{display:flex;flex-wrap:wrap;gap:.75rem}
+section.block{padding:3.25rem 0}
+h2{font-size:2.3rem;margin-bottom:1.5rem}
+.news{display:grid;gap:1.25rem;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr))}
+article.n{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--ember);padding:1.25rem}
+article.n time{color:var(--muted);font-size:.95rem}
+article.n h3{font-size:1.6rem;margin:.3rem 0 .5rem}
+article.n p{margin:0;color:var(--muted)}
+.social{background:var(--surface);border-block:1px solid var(--line)}
+.gallery{display:grid;gap:.6rem;grid-template-columns:repeat(auto-fill,minmax(9rem,1fr));margin:0 0 1.5rem}
+.gallery div{aspect-ratio:1;background:var(--mat);color:var(--ice);display:grid;place-items:center;text-align:center;font-size:.85rem;padding:.5rem;background-image:linear-gradient(var(--mat-line) 1px,transparent 1px),linear-gradient(90deg,var(--mat-line) 1px,transparent 1px);background-size:24px 24px}
+.note{color:var(--muted);font-size:.95rem;max-width:44rem}
+.find{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));align-items:start}
+.members{display:grid;gap:1rem;grid-template-columns:repeat(auto-fill,minmax(14rem,1fr))}
+.m{background:var(--surface);border:1px solid var(--line);padding:1rem;display:flex;gap:.9rem;align-items:center}
+.av{flex:none;width:3rem;height:3rem;border-radius:50%;background:var(--mat);color:var(--ice);display:grid;place-items:center;font-family:"Pirata One",serif;font-size:1.4rem}
+.m b{display:block}.m span{color:var(--muted);font-size:.95rem}
+form{display:grid;gap:1.1rem;max-width:36rem;background:var(--surface);border:1px solid var(--line);padding:1.5rem}
+label{display:grid;gap:.3rem;font-weight:600}
+input,select,textarea{font:inherit;padding:.6rem .7rem;border:1px solid var(--muted);border-radius:3px;background:var(--bg);color:var(--ink)}
+.chk{display:flex;gap:.6rem;align-items:flex-start;font-weight:400}
+.chk input{margin-top:.35rem}
+#ok{display:none;background:var(--mat);color:#eef2f2;padding:1rem 1.25rem;max-width:36rem;border-left:5px solid var(--ember)}
+footer{background:var(--mat);color:var(--ice);padding:2rem 0;font-size:.95rem}
+
+@media (prefers-reduced-motion:no-preference){.hero h1{animation:in .7s ease-out both}@keyframes in{from{opacity:0;transform:translateY(14px)}}}
+
+nav ul{list-style:none;margin:0;padding:0;display:flex;gap:.25rem;flex-wrap:wrap}
+nav li.current-menu-item>a,nav li.current_page_item>a{border-color:var(--ember)}
+.aviso{max-width:36rem;padding:1rem 1.25rem;margin-bottom:1.5rem;border-left:5px solid var(--ember);background:var(--mat);color:#eef2f2}
+.hp{position:absolute;left:-9999px}
+.entry{max-width:44rem}
